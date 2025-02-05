@@ -18,3 +18,10 @@ class AESEncryption:
         plaintext = unpad(cipher.decrypt(ciphertext[AES.block_size:]), AES.block_size)
         return plaintext.decode()
 
+# Example Usage
+if __name__ == "__main__":
+    aes = AESEncryption()
+    encrypted = aes.encrypt("Sensitive data")
+    print(f"Encrypted: {encrypted}")
+    decrypted = aes.decrypt(encrypted)
+    print(f"Decrypted: {decrypted}")
